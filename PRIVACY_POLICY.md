@@ -1,6 +1,6 @@
 # Privacy Policy for Story Plan
 
-**Last updated:** January 06, 2026
+**Last updated:** January 20, 2026
 
 ---
 
@@ -31,13 +31,6 @@ We are committed to protecting your privacy and ensuring that your information i
 - We do not have access to your personal content.
 
 ### Device Activity & Installed Apps (Optional)
-
-- **Installed Apps for Usage Insights**: The App requests the `QUERY_ALL_PACKAGES` permission to identify installed applications that appear in usage insights.
-  **Purpose**:
-  1. Allow you to choose which apps appear in your digital wellbeing insights.
-  2. Display readable app names and icons alongside your usage statistics.
-  3. Categorize apps (e.g., "Productivity", "Social") to provide grouped insights.
-  **Storage**: Processed locally; not transmitted to any server.
 
 - **Usage Statistics**: The App requests `PACKAGE_USAGE_STATS` to access screen time data.
   **Purpose**: To generate charts and insights showing how you spend your time.
@@ -101,11 +94,6 @@ All data collected and processed by the App remains on your device. You have com
 ---
 
 ## Permissions Explained
-
-### Inventory of Installed Apps (`QUERY_ALL_PACKAGES`)
-
-- **Why we request it**: To allow you to manage and categorize your digital habits and display meaningful names and icons for apps.
-- **Privacy**: This list is never sent off your device.
 
 ### Usage Access Permission (`PACKAGE_USAGE_STATS`)
 
