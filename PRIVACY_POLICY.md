@@ -1,6 +1,6 @@
 # Privacy Policy for Story Plan
 
-**Last updated:** January 20, 2026
+**Last updated:** March 9, 2026
 
 ---
 
@@ -14,11 +14,10 @@ We are committed to protecting your privacy and ensuring that your information i
 
 ## Data Safety Summary
 
-- All personal data is processed and stored locally on your device.
-- No personal data is transmitted to external servers.
-- No data is shared with third parties.
-- No data is used for advertising, profiling, or marketing.
-- You can delete all data at any time through app settings or by uninstalling the App.
+- **Local First**: Most personal data is processed and stored locally on your device.
+- **User-Controlled Cloud Features**: Optional cloud features (Google Drive backup, cloud logging) involve data transmission only when explicitly enabled and initiated by you.
+- **Privacy by Design**: No data is shared with third parties for advertising, profiling, or marketing.
+- **Your Data, Your Control**: You can delete all local and cloud-stored data at any time through app settings or your personal Google Drive.
 
 ---
 
@@ -26,30 +25,53 @@ We are committed to protecting your privacy and ensuring that your information i
 
 ### Local Data Storage
 
-- Your journal entries, habits, goals, and tasks are stored locally on your device.
-- All personal data remains on your device and is not transmitted to any external servers.
+- Your journal entries, habits, goals, and tasks are stored locally on your device in a secure database.
+- Metadata for media attachments and location check-ins are also stored locally.
 - We do not have access to your personal content.
+
+### Location Information (New)
+
+- **Feature**: The App allows you to add location "check-ins" to your story entries.
+- **Data Collected**: When enabled, the App collects precise latitude and longitude coordinates and reverse-geocoded addresses.
+- **Purpose**: To help you remember where your stories took place and provide location-based context for your reflections.
+- **Storage**: Location data is stored locally with your tasks/stories. If Cloud Backup is enabled, this data is included in your encrypted backups.
+
+### Cloud Backup and Storage (New)
+
+- **Feature**: Optional backup of your database and media files to your personal Google Drive account.
+- **Data Transmitted**: Your local database (entries, habits, goals, location history) and any attached media (photos, videos, audio).
+- **Authentication**: We use Google Sign-In to authenticate you. We only request the `drive.file` scope, meaning we can only access files created by the Story Plan app.
+- **Encryption**: Backups are encrypted before being uploaded to your Drive to ensure only your device can decrypt them.
+
+### Diagnostic Information & Cloud Logging (New)
+
+- **Feature**: Systematic logging of app events to assist in troubleshooting and performance optimization.
+- **Data Collected**: Non-personally identifiable diagnostic logs (e.g., error messages, system event timings, feature usage counts).
+- **Cloud Sync**: If enabled, these logs are synced to a dedicated folder in your personal Google Drive.
+- **Purpose**: To help us identify and fix bugs. We do not automatically receive these logs; they remain in your Drive unless you choose to share them for support.
 
 ### Device Activity & Installed Apps (Optional)
 
 - **Usage Statistics**: The App requests `PACKAGE_USAGE_STATS` to access screen time data.
-  **Purpose**: To generate charts and insights showing how you spend your time.
-  **Storage**: Stored locally in the app's database; not shared with third parties.
+- **Purpose**: To generate charts and insights showing how you spend your time (Unified Metrics).
+- **Storage**: Stored locally in the app's database; not shared with third parties.
 
 ### Media Files
 
 - Photos, audio recordings, and videos you attach to journal entries are stored locally.
-- These files are not transmitted to any external servers.
+- If Cloud Backup is enabled, these are synced to your Google Drive.
 
-### App Settings and Preferences
+### User-Initiated Feedback and Log Sharing (New)
 
-- Your app settings, theme preferences, and notification preferences are stored locally.
-- These settings are used to customize your experience within the App.
+- **Feature**: You can manually share diagnostic logs and feedback with us for support purposes.
+- **Data Shared**: If you choose to use this feature, the App will bundle diagnostic logs and the feedback you've written into a message you can send via your preferred email client or sharing method.
+- **Explicit Consent**: This action is entirely manual and initiated by you. No data is sent automatically.
+- **Purpose**: To help us provide technical support and improve the App based on your feedback.
 
 ### No Advertising or Profiling
 
 - Story Plan does not use your data for advertising, profiling, or marketing purposes.
-- We do not build user profiles, and we do not use your data to target ads or recommendations.
+- We do not build user profiles, and we do not use your data to target ads.
 
 ---
 
@@ -57,64 +79,68 @@ We are committed to protecting your privacy and ensuring that your information i
 
 We use the information to:
 
-1. Provide and maintain the App's functionality.
+1. Provide and maintain the App's functionality, including location check-ins and cloud backups.
 2. Personalize your experience within the App.
-3. Generate on-device summaries and insights to help you reflect on your habits and activities.
-4. Improve the App's features and performance.
+3. Generate on-device summaries and insights (Unified Metrics) to help you reflect on your habits and activities.
+4. Improve the App's features and performance through diagnostic log analysis.
+5. Secure your data through encryption and local authentication.
 
 ---
 
 ## Data Security
 
-- All data is stored locally on your device.
-- We implement technical and organizational measures to protect your data from unauthorized access, alteration, or destruction.
-- The security of your data primarily depends on the security of your device.
+- **Encryption**: Cloud backups are encrypted using the advanced AES-256 standard in CBC mode before being uploaded to your personal Google Drive account. This ensures that only your device can decrypt and access the data.
+- **Local Storage**: All data on your device is protected by standard OS-level security measures.
+- **Selective Access**: We only request the minimum permissions necessary for app features.
 
 ---
 
 ## Data Retention
 
-- Your data remains on your device as long as you use the App.
-- You can delete your data at any time by:
-  1. Using the export feature to save data externally.
-  2. Uninstalling the App.
-  3. Using the clear storage/reset feature in Settings.
+- **Local Data**: Remains on your device as long as the App is installed.
+- **Cloud Data**: Remains in your Google Drive until you delete it or disconnect the App.
+- **Deletion**: You can delete all local data via **Settings > Clear Storage**. You can delete cloud backups directly from your Google Drive.
 
 ---
 
 ## Your Rights
 
-All data collected and processed by the App remains on your device. You have complete control and can:
+You have complete control over your data:
 
-- Delete or reset all your data at any time.
-- Export your data for personal backup.
-- Manage which apps are included in usage insights.
-- Customize app categories and usage tracking preferences.
+- **Access/Export**: Export your local data at any time.
+- **Delete**: Remove all local and cloud data.
+- **Revoke**: Withdraw permissions for location, notifications, or usage access at any time via device settings.
 
 ---
 
 ## Permissions Explained
 
+### Location Permissions (`ACCESS_FINE_LOCATION`)
+
+- **Why we request it**: To allow you to add "check-ins" to your stories and tasks.
+- **How it's used**: To get your current coordinates when you choose to add a location.
+- **How to control it**: Grant or revoke in **Settings > Location**.
+
+### Google Account Access
+
+- **Why we request it**: To enable Cloud Backups and Cloud Logging.
+- **What data it provides**: Access to your email (for identification) and file storage within your own Drive.
+- **How to control it**: Sign in or out via the App's **Cloud Settings**.
+
 ### Usage Access Permission (`PACKAGE_USAGE_STATS`)
 
 - **Why we request it**: To provide insights about your app usage patterns.
-- **What data it provides**: App activity durations and timings as recorded by Android’s Usage Access system.
-- **How it's used**: To generate analytics and usage trends within the App.
-- **How to control it**: You can grant or revoke this permission in **Settings > Apps > Special app access > Usage access**.
+- **What data it provides**: App activity durations and timings.
+- **How it's used**: To generate analytics and trends within the App.
 
 ### Biometric Authentication
 
 - **Why we request it**: To provide secure access to locked journal entries.
-- **What data it provides**: Access to your device's biometric system (fingerprint, face recognition).
-- **How it's used**: To authenticate your identity locally.
-- **How to control it**: Enable or disable in the App's **Journal Lock Settings**.
+- **How it's used**: To authenticate your identity locally using device systems (fingerprint, face recognition).
 
 ### Notifications
 
 - **Why we request it**: To send reminders for habits, tasks, and reflections.
-- **What data it provides**: Ability to display notifications on your device.
-- **How it's used**: To send timely reminders based on your preferences.
-- **How to control it**: Manage notification settings in the App or device settings.
 
 ---
 
@@ -130,7 +156,6 @@ All data collected and processed by the App remains on your device. You have com
 
 - We may update this Privacy Policy occasionally.
 - Changes are effective when posted on this page with an updated **Last updated** date.
-- We encourage you to review this Privacy Policy periodically.
 
 ---
 
@@ -143,5 +168,4 @@ All data collected and processed by the App remains on your device. You have com
 ## Data Controller
 
 - The data controller for Story Plan is the app developer.
-- Since all data is stored locally on your device, the developer does not have access to your personal content.
-- For any privacy-related concerns, please contact us using the email above.
+- Since most data is stored locally or in your personal cloud storage, the developer does not have access to your personal content unless you explicitly provide it for support.
