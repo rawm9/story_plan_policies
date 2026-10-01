@@ -1,171 +1,216 @@
 # Privacy Policy for Story Plan
 
-**Last updated:** March 9, 2026
+**Last updated:** September 28, 2026
 
 ---
 
-## Introduction
+## Summary
 
-Story Plan ("we", "us", or "our") operates the Story Plan mobile application (the "App"). This Privacy Policy explains how the App collects, uses, and protects your personal information and what choices you have regarding your data.
+Story Plan is built to keep your personal content on your device.
 
-We are committed to protecting your privacy and ensuring that your information is handled in a safe and responsible manner. This policy applies to all features of the App.
+- **Your journal entries, habits, goals, tasks, media, and location data are stored on your device.** We operate no servers, and we have no account system and no access to your content.
+- **If you enable Cloud Backup, your data is encrypted before upload** and saved to your own Google Drive. We cannot read it.
+- **We do not use your content for advertising, profiling, or marketing, and we do not sell your data.**
+- **A small amount of technical information does leave your device** when you use the app — for turning coordinates into an address, for anonymous usage analytics, and for crash diagnostics. Each of these is explained in full below, and you can turn analytics and crash reporting off in Settings.
 
----
-
-## Data Safety Summary
-
-- **Local First**: Most personal data is processed and stored locally on your device.
-- **User-Controlled Cloud Features**: Optional cloud features (Google Drive backup, cloud logging) involve data transmission only when explicitly enabled and initiated by you.
-- **Privacy by Design**: No data is shared with third parties for advertising, profiling, or marketing.
-- **Your Data, Your Control**: You can delete all local and cloud-stored data at any time through app settings or your personal Google Drive.
+We would rather be precise about what leaves your device than tell you nothing does.
 
 ---
 
 ## Information Collection and Use
 
-### Local Data Storage
+### Your content (stored on your device)
 
-- Your journal entries, habits, goals, and tasks are stored locally on your device in a secure database.
-- Metadata for media attachments and location check-ins are also stored locally.
-- We do not have access to your personal content.
+Your journal entries, habits, goals, tasks, check-ins, and all associated metadata are stored in the app's private storage on your device. This includes any location information and any media you attach.
 
-### Location Information (New)
+We do not have access to this content. It is not transmitted to us, and it is not included in crash reports or analytics.
 
-- **Feature**: The App allows you to add location "check-ins" to your story entries.
-- **Data Collected**: When enabled, the App collects precise latitude and longitude coordinates and reverse-geocoded addresses.
-- **Purpose**: To help you remember where your stories took place and provide location-based context for your reflections.
-- **Storage**: Location data is stored locally with your tasks/stories. If Cloud Backup is enabled, this data is included in your encrypted backups.
+### Location and address lookup
 
-### Cloud Backup and Storage (New)
+**What the app does:** When you choose to add a location to a story or task, the app records your coordinates and converts them into a readable address (for example, "Park Road, Pune, Maharashtra").
 
-- **Feature**: Optional backup of your database and media files to your personal Google Drive account.
-- **Data Transmitted**: Your local database (entries, habits, goals, location history) and any attached media (photos, videos, audio).
-- **Authentication**: We use Google Sign-In to authenticate you. We only request the `drive.file` scope, meaning we can only access files created by the Story Plan app.
-- **Encryption**: Backups are encrypted before being uploaded to your Drive to ensure only your device can decrypt them.
+**What leaves your device:** To perform that conversion, the app uses your device's built-in geocoding service. On most Android devices this is provided by Google, which receives the coordinates in order to return an address. The app does not contact any third-party geocoding provider directly, and no location data is sent to the developer.
 
-### Diagnostic Information & Cloud Logging (New)
+**Storage:** The coordinates and the resulting address are stored locally with your entry. If Cloud Backup is enabled, they are included in your encrypted backups.
 
-- **Feature**: Systematic logging of app events to assist in troubleshooting and performance optimization.
-- **Data Collected**: Non-personally identifiable diagnostic logs (e.g., error messages, system event timings, feature usage counts).
-- **Cloud Sync**: If enabled, these logs are synced to a dedicated folder in your personal Google Drive.
-- **Purpose**: To help us identify and fix bugs. We do not automatically receive these logs; they remain in your Drive unless you choose to share them for support.
+### Device activity and installed apps
 
-### Device Activity & Installed Apps (Optional)
+**Feature:** If you enable Unified Metrics, the app reads screen time and app-usage data on your device to generate charts and insights about how you spend your time.
 
-- **Usage Statistics**: The App requests `PACKAGE_USAGE_STATS` to access screen time data.
-- **Purpose**: To generate charts and insights showing how you spend your time (Unified Metrics).
-- **Storage**: Stored locally in the app's database; not shared with third parties.
+**Permissions used:** `PACKAGE_USAGE_STATS` (app usage) and `QUERY_ALL_PACKAGES` (to identify the apps in that usage data).
 
-### Media Files
+**Storage:** This data is generated and stored locally. It is not transmitted to the developer, and it is not included in analytics or crash reports.
 
-- Photos, audio recordings, and videos you attach to journal entries are stored locally.
-- If Cloud Backup is enabled, these are synced to your Google Drive.
+**If you turn Unified Metrics off,** the app stops reading usage data. You can also revoke the permission at any time in Android Settings.
 
-### User-Initiated Feedback and Log Sharing (New)
+### Media files
 
-- **Feature**: You can manually share diagnostic logs and feedback with us for support purposes.
-- **Data Shared**: If you choose to use this feature, the App will bundle diagnostic logs and the feedback you've written into a message you can send via your preferred email client or sharing method.
-- **Explicit Consent**: This action is entirely manual and initiated by you. No data is sent automatically.
-- **Purpose**: To help us provide technical support and improve the App based on your feedback.
+Photos, audio recordings, and videos you attach to entries are stored in the app's private storage on your device. If Cloud Backup is enabled, they are uploaded to your Drive as part of your encrypted backup.
 
-### No Advertising or Profiling
+The app requests `RECORD_AUDIO` to record voice entries you choose to create, and `READ_MEDIA_AUDIO` so audio you attach can be included in your backup.
 
-- Story Plan does not use your data for advertising, profiling, or marketing purposes.
-- We do not build user profiles, and we do not use your data to target ads.
+### Cloud Backup and Google Drive
 
----
+**Optional feature:** You can choose to back up your database and media to your own Google Drive.
 
-## How We Use Your Information
+- **Authentication:** The app uses Google Sign-In and requests only the `drive.file` scope, meaning it can access only files it created. It cannot read the rest of your Drive.
+- **Encryption:** Your data is encrypted on your device before upload. Google stores ciphertext it cannot decrypt.
+- **What is uploaded:** Your entries, habits, goals, tasks, location history, and any media you have attached.
+- **Retention:** Cloud backups stay in your Drive until you delete them or disconnect the app.
 
-We use the information to:
+**Backups are available on every plan.** Subscription status affects how many backups the app retains on your device, not whether you can create or restore one. You can restore a backup on the free plan.
 
-1. Provide and maintain the App's functionality, including location check-ins and cloud backups.
-2. Personalize your experience within the App.
-3. Generate on-device summaries and insights (Unified Metrics) to help you reflect on your habits and activities.
-4. Improve the App's features and performance through diagnostic log analysis.
-5. Secure your data through encryption and local authentication.
+> **Keep your own copy.** Uninstalling the app removes its data from your device. If you have never made a backup, or if you uninstall without one, that data cannot be recovered. To protect yourself, enable Cloud Backup before uninstalling, or use the app's export function to save a backup file somewhere outside the app.
+
+### Cloud logging (optional)
+
+If you enable it, the app can sync diagnostic logs to a folder in your own Google Drive. We do not receive these logs. They remain in your Drive unless you choose to share them with us for support.
+
+### Purchases and subscriptions
+
+**Payments are processed entirely by Google Play.** The app does not receive or store your card details.
+
+- Purchases and subscriptions are made through Google Play Billing. Google acts as the payment processor and issues the receipt.
+- The purchase record is held in your Google Play account. We receive only an anonymous purchase token and a hashed reference, which the app stores on your device to confirm your subscription status.
+- Renewals, cancellations, and refunds are managed through Google Play. You can cancel a subscription in your Play Store account at any time; access continues until the end of the paid period.
+- Any free trial is offered and administered by Google Play. The app does not run its own trial timer.
+- If you unsubscribe, you keep everything you created while subscribed. Nothing is deleted, and existing items remain fully usable. Subscription status affects whether you can create new items beyond the free-plan limits.
+
+### Usage analytics
+
+**Optional, and you can turn it off in Settings.**
+
+The app uses Firebase Analytics (Google) to measure whether the app is working. It records anonymous events such as:
+
+- the paywall being viewed
+- a purchase being started, completed, or failed
+- the restore-purchases button being tapped
+- which features are used and how often
+
+This tells us which features are useful and where people get stuck, so we can decide what to build next. It cannot tell us who you are.
+
+**What this involves:** app interactions, the app's version, your device model, your language, a randomly generated identifier for this app installation, and an approximate location derived from your IP address. It does **not** include your journal entries, habits, goals, tasks, media, location check-ins, device-usage data, or anything you type.
+
+**Turning it off:** Disabling analytics stops all of these events from being sent. The app works the same way either way.
+
+### Crash diagnostics
+
+**You can turn this off in Settings.**
+
+If the app crashes, it can automatically send a report to Firebase Crashlytics (Google) so we can find and fix the problem. Without this, we would only learn about a crash if a user chose to tell us.
+
+**What a crash report contains:** the error type, the stack trace, your device model, your Android version, the app version, and a randomly generated identifier for this installation. It may also include technical breadcrumbs about what the app was doing.
+
+**What a crash report never contains:** your journal entries, habits, goals, tasks, media, location check-ins, or device-usage data. The app does not read your database when sending a report, and we take care not to include personal content in error messages.
+
+### Fonts
+
+The app's fonts are included in the app itself. The app does not download fonts from the internet at runtime, and it does not contact Google's font servers.
+
+### Feedback and log sharing
+
+You can manually share a diagnostic log with us for support. When you do this, the app prepares the log and hands it to your email app or sharing sheet — nothing is sent automatically, and nothing is sent unless you choose to send it.
+
+### No advertising
+
+We do not use your data for advertising, profiling, or marketing. We do not build advertising profiles and we do not sell your data to anyone.
 
 ---
 
 ## Data Security
 
-- **Encryption**: Cloud backups are encrypted using the advanced AES-256 standard in CBC mode before being uploaded to your personal Google Drive account. This ensures that only your device can decrypt and access the data.
-- **Local Storage**: All data on your device is protected by standard OS-level security measures.
-- **Selective Access**: We only request the minimum permissions necessary for app features.
+- **Cloud backups are encrypted** using AES-256 before being uploaded to your Drive. The encryption key is generated on your device and never leaves it, which means we cannot decrypt your backups — and neither can anyone else, including Google.
+- **Local data is stored in the app's private storage**, which is protected by your device's operating system and its standard file encryption. To be clear about the distinction: the local database is *not* separately encrypted by the app. On a rooted or otherwise compromised device, someone with access to the app's files could read it. Encryption beyond what the operating system provides applies to your backups, not to the local database.
+- **Backups you export manually** are encrypted the same way. Only you hold the key, so keep the exported file safe — it cannot be recovered if you lose it.
+- **The app can be locked with biometrics** (`USE_BIOMETRIC`), so locked entries stay behind your fingerprint or face unlock.
 
 ---
 
 ## Data Retention
 
-- **Local Data**: Remains on your device as long as the App is installed.
-- **Cloud Data**: Remains in your Google Drive until you delete it or disconnect the App.
-- **Deletion**: You can delete all local data via **Settings > Clear Storage**. You can delete cloud backups directly from your Google Drive.
+- **Local data:** stays on your device until you delete it or uninstall the app. Uninstalling removes it.
+- **Backups in your Drive:** stay until you delete them from the app or from Drive, or until you disconnect the app.
+- **Analytics data:** retained by Google for a limited period in line with Firebase's own retention policy.
+- **Crash reports:** retained by Google for up to 90 days.
+
+### Deleting your data
+
+You can delete your data at any time:
+
+- **Individual items** — delete entries, habits, goals, and tasks from within the app.
+- **Media** — delete attachments from an entry, or from My Data.
+- **Backups** — delete backups individually from My Data.
+- **All local data** — uninstalling the app removes everything it stored on your device.
+- **Cloud data** — delete the backup folder from your Google Drive, or revoke the app's Drive access in your Google account settings. Your files then become yours alone, in your own Drive.
+
+Note that deleting a backup does not delete the data already restored from it. Delete the local copy separately by deleting it in the app or uninstalling.
 
 ---
 
-## Your Rights
+## Your Rights and Control
 
-You have complete control over your data:
+- **Access and export** — export your data at any time from My Data.
+- **Delete** — remove your data as described above.
+- **Correct** — edit any entry, habit, goal, or task directly in the app.
+- **Withdraw consent** — turn off analytics and crash reporting in Settings, and revoke any permission in Android Settings.
+- **Disconnect Google** — sign out of Cloud Backup and Cloud Logging to remove the app's access to your Drive.
 
-- **Access/Export**: Export your local data at any time.
-- **Delete**: Remove all local and cloud data.
-- **Revoke**: Withdraw permissions for location, notifications, or usage access at any time via device settings.
+Because there is no server and no account, exercising these rights is something you do directly in the app or in your own Google account. We cannot retrieve data for you, because we never held it.
 
 ---
 
 ## Permissions Explained
 
-### Location Permissions (`ACCESS_FINE_LOCATION`)
+| Permission | Why it's used |
+|---|---|
+| `INTERNET` | Connecting to Google Drive for backup, and to Google Play for billing and analytics. |
+| `ACCESS_NETWORK_STATE` | Checking whether you are online before syncing. |
+| `POST_NOTIFICATIONS` | Reminders, alarms, and habit and task notifications. |
+| `SCHEDULE_EXACT_ALARM` | Scheduling your alarms at the exact time you set, so they fire when you expect. The app continues to work if this is not granted. |
+| `RECEIVE_BOOT_COMPLETED` | Re-registering your alarms after the device restarts. |
+| `VIBRATE` | Vibration for alarms and reminders. |
+| `WAKE_LOCK` | Keeping the CPU awake while an alarm is ringing. |
+| `FOREGROUND_SERVICE` | Playing an alarm sound reliably, even when the app is closed. |
+| `FOREGROUND_SERVICE_MEDIA_PLAYBACK` | Required by Android to keep the alarm service running while audio plays. |
+| `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` | Requesting exemption so your alarms are not delayed or dropped by aggressive battery saving. |
+| `USE_BIOMETRIC` | Unlocking the app with your fingerprint or face. |
+| `USE_FULL_SCREEN_INTENT` | Showing an alarm as a full-screen activity so a habit or task alarm is seen immediately. |
+| `SYSTEM_ALERT_WINDOW` | Reserved for alarm presentation on some Android versions. |
+| `RECORD_AUDIO` | Recording voice entries you choose to create. |
+| `READ_MEDIA_AUDIO` | Including audio you attach in your backup. |
+| `READ_EXTERNAL_STORAGE` | Reading media you choose to attach, on Android versions that require it. |
+| `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION` | Getting your coordinates when you choose to add a location to a story or task. |
+| `PACKAGE_USAGE_STATS` | Reading screen time for Unified Metrics. |
+| `QUERY_ALL_PACKAGES` | Identifying which apps appear in your usage data for Unified Metrics. |
 
-- **Why we request it**: To allow you to add "check-ins" to your stories and tasks.
-- **How it's used**: To get your current coordinates when you choose to add a location.
-- **How to control it**: Grant or revoke in **Settings > Location**.
-
-### Google Account Access
-
-- **Why we request it**: To enable Cloud Backups and Cloud Logging.
-- **What data it provides**: Access to your email (for identification) and file storage within your own Drive.
-- **How to control it**: Sign in or out via the App's **Cloud Settings**.
-
-### Usage Access Permission (`PACKAGE_USAGE_STATS`)
-
-- **Why we request it**: To provide insights about your app usage patterns.
-- **What data it provides**: App activity durations and timings.
-- **How it's used**: To generate analytics and trends within the App.
-
-### Biometric Authentication
-
-- **Why we request it**: To provide secure access to locked journal entries.
-- **How it's used**: To authenticate your identity locally using device systems (fingerprint, face recognition).
-
-### Notifications
-
-- **Why we request it**: To send reminders for habits, tasks, and reflections.
+Every one of these can be revoked in Android Settings. The app continues to work; the related feature will not.
 
 ---
 
 ## Children's Privacy
 
-- The App is not specifically designed for children under 13.
-- We do not knowingly collect personal information from children under 13.
-- If you are a parent or guardian and believe that a child has provided personal information, please contact us so we can delete such information.
+The app is not directed at children under 13, and we do not knowingly collect personal information from children under 13. Because all content is stored on your device and we operate no servers, we do not hold any information about any user, child or otherwise.
+
+If you believe a child under 13 has provided personal information, contact us and we will help you remove it from their device.
 
 ---
 
 ## Changes to This Privacy Policy
 
-- We may update this Privacy Policy occasionally.
-- Changes are effective when posted on this page with an updated **Last updated** date.
+We may update this policy as the app changes. The **Last updated** date at the top always reflects the current version, and changes take effect when published. If a change materially affects how your data is handled, we will say so in the app before it takes effect.
 
 ---
 
 ## Contact Us
 
-- Email: <storyplanpal@gmail.com>
+- **Email:** storyplandev@gmail.com
+
+For any privacy question, request to delete data, or to report a concern, email us. If you are in the EEA or UK and wish to complain to a supervisory authority, you are free to do so.
 
 ---
 
 ## Data Controller
 
-- The data controller for Story Plan is the app developer.
-- Since most data is stored locally or in your personal cloud storage, the developer does not have access to your personal content unless you explicitly provide it for support.
+The data controller for Story Plan is the app developer.
+
+Most data is stored on your device or in your own cloud storage, so the developer does not have access to your personal content unless you explicitly provide it for support. The limited data described under *Usage analytics* and *Crash diagnostics* is processed by Google, acting as our processor under those services' own terms and privacy policies.
