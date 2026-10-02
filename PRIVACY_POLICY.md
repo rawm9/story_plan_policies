@@ -9,7 +9,7 @@
 Story Plan is built to keep your personal content on your device.
 
 - **Your journal entries, habits, goals, tasks, media, and location data are stored on your device.** We operate no servers, and we have no account system and no access to your content.
-- **If you enable Cloud Backup, your data is encrypted before upload** and saved to your own Google Drive. We cannot read it.
+- **If you have Pro and enable Cloud Backup, your data is encrypted before upload** and saved to your own Google Drive. We cannot read it.
 - **We do not use your content for advertising, profiling, or marketing, and we do not sell your data.**
 - **A small amount of technical information does leave your device** when you use the app — for turning coordinates into an address, for anonymous usage analytics, and for crash diagnostics. Each of these is explained in full below, and you can turn analytics and crash reporting off in Settings.
 
@@ -33,11 +33,11 @@ We do not have access to this content. It is not transmitted to us, and it is no
 
 **Storage:** The coordinates and the resulting address are stored locally with your entry. If Cloud Backup is enabled, they are included in your encrypted backups.
 
-### Device activity and installed apps
+### Device activity and the apps you use
 
-**Feature:** If you enable Unified Metrics, the app reads screen time and app-usage data on your device to generate charts and insights about how you spend your time.
+**Feature:** If you enable Unified Metrics, the app reads screen time and app-usage data on your device to generate charts and insights about how you spend your time. The App Visibility list shows the apps it can describe: those with a launcher icon, plus any app you have used in the last 30 days.
 
-**Permissions used:** `PACKAGE_USAGE_STATS` (app usage) and `QUERY_ALL_PACKAGES` (to identify the apps in that usage data).
+**Permissions used:** `PACKAGE_USAGE_STATS` (app usage). This single permission covers both the numbers and the app list: the app names and icons shown in App Visibility come from your usage data and from Android's list of apps that have a launcher icon. The app never requests permission to see your full list of installed applications.
 
 **Storage:** This data is generated and stored locally. It is not transmitted to the developer, and it is not included in analytics or crash reports.
 
@@ -51,20 +51,18 @@ The app requests `RECORD_AUDIO` to record voice entries you choose to create, an
 
 ### Cloud Backup and Google Drive
 
-**Optional feature:** You can choose to back up your database and media to your own Google Drive.
+**A Story Plan Pro feature.** You can choose to back up your database and media to your own Google Drive.
 
 - **Authentication:** The app uses Google Sign-In and requests only the `drive.file` scope, meaning it can access only files it created. It cannot read the rest of your Drive.
 - **Encryption:** Your data is encrypted on your device before upload. Google stores ciphertext it cannot decrypt.
 - **What is uploaded:** Your entries, habits, goals, tasks, location history, and any media you have attached.
 - **Retention:** Cloud backups stay in your Drive until you delete them or disconnect the app.
 
-**Backups are available on every plan.** Subscription status affects how many backups the app retains on your device, not whether you can create or restore one. You can restore a backup on the free plan.
+**Creating backups and restoring them is free on every plan.** Uploading to Google Drive is the part that needs Pro. On the free plan you can still create backups on your device, export them, and restore any backup you have — including a cloud backup you made while you had Pro.
+
+**If your Pro plan ends, nothing is hidden and nothing is deleted.** New uploads to Google Drive stop, because Drive backup is a Pro feature. The backups you already made stay in your Drive, stay listed in the app, and stay restorable. The only thing you lose is the ability to upload new ones.
 
 > **Keep your own copy.** Uninstalling the app removes its data from your device. If you have never made a backup, or if you uninstall without one, that data cannot be recovered. To protect yourself, enable Cloud Backup before uninstalling, or use the app's export function to save a backup file somewhere outside the app.
-
-### Cloud logging (optional)
-
-If you enable it, the app can sync diagnostic logs to a folder in your own Google Drive. We do not receive these logs. They remain in your Drive unless you choose to share them with us for support.
 
 ### Purchases and subscriptions
 
@@ -153,7 +151,7 @@ Note that deleting a backup does not delete the data already restored from it. D
 - **Delete** — remove your data as described above.
 - **Correct** — edit any entry, habit, goal, or task directly in the app.
 - **Withdraw consent** — turn off analytics and crash reporting in Settings, and revoke any permission in Android Settings.
-- **Disconnect Google** — sign out of Cloud Backup and Cloud Logging to remove the app's access to your Drive.
+- **Disconnect Google** — sign out of Cloud Backup to remove the app's access to your Drive.
 
 Because there is no server and no account, exercising these rights is something you do directly in the app or in your own Google account. We cannot retrieve data for you, because we never held it.
 
@@ -180,8 +178,7 @@ Because there is no server and no account, exercising these rights is something 
 | `READ_MEDIA_AUDIO` | Including audio you attach in your backup. |
 | `READ_EXTERNAL_STORAGE` | Reading media you choose to attach, on Android versions that require it. |
 | `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION` | Getting your coordinates when you choose to add a location to a story or task. |
-| `PACKAGE_USAGE_STATS` | Reading screen time for Unified Metrics. |
-| `QUERY_ALL_PACKAGES` | Identifying which apps appear in your usage data for Unified Metrics. |
+| `PACKAGE_USAGE_STATS` | Reading screen time for Unified Metrics, and identifying the apps in that usage data. |
 
 Every one of these can be revoked in Android Settings. The app continues to work; the related feature will not.
 
